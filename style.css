@@ -4,10 +4,44 @@
     box-sizing: border-box;
     background-color: aquamarine;
 }
+/* utilizzare il @keyframe  */
 .test-uno {
   display: inline-block;
   margin: 0 0.5rem;
-
+  /* --animate-delay: 5s; */
   animation: bounce; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 10s; /* don't forget to set a duration! */
+  animation-duration: 5s; /* don't forget to set a duration! */
 }
+
+/* This only changes this particular animation duration */
+/* sovrascrive la classe  */
+.animate__animated.animate__bounce {
+  --animate-duration: 15s;
+}
+
+
+/* This changes all the animations globally */
+/* per cambiarle tutte */
+/* :root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+} */
+
+
+/* per i ritardi */
+/* All delay classes will take 2x longer to start */
+/* :root {
+  --animate-delay: 2s;
+} */
+
+
+/* All delay classes will take half the time to start */
+/* :root {
+  --animate-delay: 0.5s;
+} */
+
+
+/* per ripetere un elemento */
+/* .classe-elemento { */
+  /* --animate-repeat: 2;
+} */
